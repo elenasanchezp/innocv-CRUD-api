@@ -1,0 +1,45 @@
+﻿@model innocv_crud_api.Models.User
+
+@{
+    ViewBag.Title = "Delete User Page";
+}
+<div class="jumbotron">
+    <h1>Delete user</h1>
+</div>
+<div>
+    @if (Model != null)
+    {
+        <h5>Please, see the details of your user before removing</h5>
+        <dl class="row">
+            <dt class="col-sm-3">Id</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Id)</dd>
+
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Name)</dd>
+
+            <dt class="col-sm-3">Birthdate</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Birthdate)</dd>
+        </dl>
+
+        using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <div class="">
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <span> The user doesn´t exit</span>
+    }
+</div>
+
+<div>
+    @Html.ActionLink("< Back to Home", "Index",
+          new { controller = "Home" },
+          new { @class = "link link-back" })
+</div>

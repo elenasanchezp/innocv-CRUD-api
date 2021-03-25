@@ -1,0 +1,34 @@
+﻿@model innocv_crud_api.Models.User
+
+@{
+    ViewBag.Title = "User details Page";
+}
+<div class="jumbotron">
+    <h1>User details</h1>
+</div>
+<div>
+    @if (Model != null)
+    {
+        <h5>Please, see the details of your user</h5>
+        <dl class="row">
+            <dt class="col-sm-3">Id</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Id)</dd>
+
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Name)</dd>
+
+            <dt class="col-sm-3">Birthdate</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(m => m.Birthdate)</dd>
+        </dl>
+    }
+    else
+    {
+        <span>The user doesn´t exit</span>
+    }
+</div>
+
+<div>
+    @Html.ActionLink("< Back to Home", "Index",
+          new { controller = "Home" },
+          new { @class = "link link-back" })
+</div>
