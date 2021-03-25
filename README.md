@@ -85,5 +85,5 @@ Allow to remove the details of the user selected.
 
 
 ## Next Steps
-  - Complete innocv-crud-api.Test project to be sure all functionality is tested and It works fine.
-  - Make published the Web Api  to be able to access from everywhere without run the project locally. 
+  - Complete "innocv-crud-api.Test" project to be sure all functionality is tested and It works fine. Currently this project is quite poor as we hadn´t had enough time to finish. As next step and before add more logic we should be sure all the CRUD actions (create, read, update and delete) has their own test. 
+  - Make published the Web API to be able to access from everywhere without run the project locally. 
