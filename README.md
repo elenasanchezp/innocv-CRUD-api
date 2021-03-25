@@ -4,10 +4,39 @@ This project contains the solution for the DotNet Exercise where it has being de
 ## Software versions used
 Visual Studio 2019
 
+## Style
+- Bootstrap v3.4.1
+- To personalizate some styles, it has been created a new style on [here](https://github.com/elenasanchezp/innocv-crud-api/blob/main/innocv-crud-api/Content/innocv/style.css)
+
+## Scrips
+- Bootstrap v3.4.1 
+- jQuery JavaScript Library v3.4.1
+
+## Database
+It has been created a localDB allocated on \App_Data\innocv_db.mdf. If contains an only table called [Users] with the following definition: 
+
+```
+CREATE TABLE [dbo].[Users] (
+    [Id]        INT            IDENTITY (1, 1) NOT NULL,
+    [Name]      NVARCHAR (MAX) NULL,
+    [Birthdate] DATETIME       NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+```
+Note: we consider the Id as an unique and not null value. It will be automatic increment one by one value.
+
+## API 
+- GET api/Users	
+- GET api/Users/{id}	
+- POST api/Users	
+- PUT api/Users/{id}	
+- DELETE api/Users/{id}	
+
+## Local set up
+The solution compiles successfully. Then if you run the app with Visual Studio (IIS Express emulator) the url is ready to be http://localhost:44382.
 
 ## Demo
-
-Here you can see a demo of each actions develop
+Here you can see a demo of each actions
 
 ### List of users
 Show the list of the users on a table and the different actions to make.
@@ -31,6 +60,5 @@ Allow to remove the details of the user selected.
 
 
 ## Next Steps
-
-Complete innocv-crud-api.Test project to be sure all functionality is tested and It works fine.
-Make published the Web Api  to be able to access from everywhere without run the project locally. 
+  - Complete innocv-crud-api.Test project to be sure all functionality is tested and It works fine.
+  - Make published the Web Api  to be able to access from everywhere without run the project locally. 
