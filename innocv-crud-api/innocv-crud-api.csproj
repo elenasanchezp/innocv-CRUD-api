@@ -189,7 +189,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\innocv_add_user.gif" />
+    <Content Include="Content\images\innocv_delete_user.gif" />
     <Content Include="Content\images\innocv_detail.gif" />
+    <Content Include="Content\images\innocv_edit_user.gif" />
     <Content Include="Content\images\innocv_list_user.png" />
     <Content Include="Content\innocv\style.css" />
     <Content Include="favicon.ico" />
