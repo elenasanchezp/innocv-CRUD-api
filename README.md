@@ -38,22 +38,22 @@ Note: go to http://localhost:44382/Help to see more details.
 
 In addition, we have test the API with Postman and get the following results:
 - GET api/Users	
- - return: Status 200 ok, Body: JSON items
+  - return: Status 200 ok, Body: JSON items
  
 - GET api/Users/{id}	
- - return: Status 200 ok, Body: JSON item
- - return: Status 404 Not found, Body: emtpy
+  - return: Status 200 ok, Body: JSON item
+  - return: Status 404 Not found, Body: emtpy
  
 - POST api/Users	
- - input: JSON item: example: {"Name":"Anna","Birthdate":"1991-01-01T00:00:00"}
- - return: Status 201 created, Body: JSON item
+  - input: JSON item: example: {"Name":"Anna","Birthdate":"1991-01-01T00:00:00"}
+  - return: Status 201 created, Body: JSON item
  
 - PUT api/Users/{id}	
- - input: JSON item: example: {"Name":"Anna","Birthdate":"1991-01-01T00:00:00"}
- - return: Status 200 ok, Body: JSON item
+  - input: JSON item: example: {"Name":"Anna","Birthdate":"1991-01-01T00:00:00"}
+  - return: Status 200 ok, Body: JSON item
  
 - DELETE api/Users/{id}	
- - return: Status 200 ok, Body: JSON item
+  - return: Status 200 ok, Body: JSON item
  
 ## Demo
 Here you can see a demo of each actions
