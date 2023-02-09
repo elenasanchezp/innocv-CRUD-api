@@ -1,9 +1,0 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="innocv_crud_api.Properties" GeneratedClassName="Settings">
-  <Profiles />
-  <Settings>
-    <Setting Name="connectionString" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">&lt;add name="DefaultConnection" providerName="System.Data.SqlClient" connectionString="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-Database_WebAPI-20130530090816;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-Database_WebAPI-20130530090816.mdf" /&gt;</Value>
-    </Setting>
-  </Settings>
-</SettingsFile>

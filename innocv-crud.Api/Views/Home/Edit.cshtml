@@ -1,0 +1,58 @@
+﻿@model innocv_crud.Api.Models.User
+
+@{
+    ViewBag.Title = "Edit User Page";
+}
+<div class="jumbotron">
+    <h1>Edit user</h1>
+</div>
+<div>
+    @if (Model != null)
+    {
+        using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h5>Please, edit the details of your user</h5>
+
+                <div class="form-group">
+                    <div class="control-label col-xs-12 col-sm-3"><strong>Id</strong></div>
+                    <div class="col-xs-12 col-sm-9">
+                        @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-xs-12 col-sm-3"><strong>Name</strong></div>
+                    <div class="col-xs-12 col-sm-9">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-xs-12 col-sm-3"><strong>Birthdate</strong></div>
+                    <div class="col-xs-12 col-sm-9">
+                        @Html.EditorFor(m => m.Birthdate, "{0:dd/MM/yyyy}", new { htmlAttributes = new { @class = "form-control datepicker", Value = (!string.IsNullOrEmpty(Model.Birthdate.ToShortDateString()) ? Model.Birthdate.ToShortDateString() : DateTime.Now.ToShortDateString()), @type = "datetime" } })
+                        @Html.ValidationMessageFor(m => m.Birthdate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Submit" class="btn btn-warning">
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <span>The user doesn´t exit</span>
+    }
+</div>
+
+<div>
+    @Html.ActionLink("< Back to Home", "Index",
+          new { controller = "Home" },
+          new { @class = "link link-back" })
+</div>
